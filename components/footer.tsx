@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function Footer() {
   return (
     <footer className="bg-light py-4 mt-5">
@@ -11,12 +9,8 @@ export default function Footer() {
           </div>
           <div className="col-md-6">
             <div className="d-flex justify-content-end">
-              <Link href="/privacy" className="text-decoration-none text-muted me-3">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-decoration-none text-muted">
-                Terms of Service
-              </Link>
+              <span className="text-decoration-none text-muted me-3">Privacy Policy</span>
+              <span className="text-decoration-none text-muted">Terms of Service</span>
             </div>
           </div>
         </div>

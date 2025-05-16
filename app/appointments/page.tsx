@@ -9,9 +9,9 @@ const appointmentsData = [
   {
     id: 1,
     doctor: {
-      name: "Dr. Sarah Johnson",
-      specialty: "Cardiologist",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "Dr. Abir Banik",
+      specialty: "Fart Analyst",
+      image: "/images/doctors/doctor3.png",
     },
     date: "2025-05-20",
     time: "10:00 AM",
@@ -20,9 +20,9 @@ const appointmentsData = [
   {
     id: 2,
     doctor: {
-      name: "Dr. Michael Chen",
-      specialty: "Pediatrician",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "Dr. Rahat Khandokar",
+      specialty: "Urologist",
+      image: "/images/doctors/doctor2.png",
     },
     date: "2025-05-25",
     time: "2:30 PM",
@@ -31,9 +31,9 @@ const appointmentsData = [
   {
     id: 3,
     doctor: {
-      name: "Dr. Emily Rodriguez",
-      specialty: "Dermatologist",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "Dr. Deedat Chowdhury",
+      specialty: "Plastic Surgeon",
+      image: "/images/doctors/doctor1.png",
     },
     date: "2025-04-15",
     time: "9:30 AM",
@@ -42,12 +42,23 @@ const appointmentsData = [
   {
     id: 4,
     doctor: {
-      name: "Dr. James Wilson",
-      specialty: "Neurologist",
-      image: "/placeholder.svg?height=300&width=300",
+      name: "Dr. Kazi Anwar",
+      specialty: "Flatulogist",
+      image: "/images/doctors/doctor5.png",
     },
     date: "2025-04-05",
     time: "11:00 AM",
+    status: "cancelled",
+  },
+  {
+    id: 5,
+    doctor: {
+      name: "Dr. Sajid Sehgal",
+      specialty: "Sexologist",
+      image: "/images/doctors/doctor4.png",
+    },
+    date: "2025-05-05",
+    time: "11:11 AM",
     status: "cancelled",
   },
 ]

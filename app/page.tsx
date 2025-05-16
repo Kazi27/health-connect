@@ -23,9 +23,9 @@ export default function Home() {
         </div>
         <div className="col-md-6">
           <Image
-            src="/placeholder.svg?height=400&width=500"
+            src="/images/hero.png"
             alt="Healthcare professionals"
-            width={500}
+            width={9000}
             height={400}
             className="img-fluid rounded shadow"
           />

@@ -143,9 +143,9 @@ export default function Login() {
                 </div>
 
                 <div className="text-center mb-3">
-                  <Link href="/forgot-password" className="text-decoration-none">
+                  <span className="text-decoration-none" style={{ cursor: "pointer", color: "#0d6efd" }}>
                     Forgot Password?
-                  </Link>
+                  </span>
                 </div>
               </form>
 

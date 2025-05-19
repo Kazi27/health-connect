@@ -108,7 +108,6 @@ export default function SignUp() {
                     onChange={handleChange}
                   >
                     <option value="patient">Patient</option>
-                    <option value="doctor">Doctor</option>
                   </select>
                 </div>
 

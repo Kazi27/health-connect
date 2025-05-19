@@ -24,7 +24,7 @@ export default function Home() {
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <div className="position-relative hero-image-container">
             <Image
-              src="/images/hero.png"
+              src="/images/heros.png"
               alt="Healthcare professionals"
               width={600}
               height={400}
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h3 className="card-title h5">Secure Health Records</h3>
                 <p className="card-text">
-                  Your health information is stored securely and accessible only to you and your doctors.
+                  Your health information is stored securely and accessible only to you & your doctors.
                 </p>
               </div>
             </div>

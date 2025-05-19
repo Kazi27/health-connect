@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import ProtectedRoute from "@/components/protected-route"
@@ -55,7 +57,21 @@ export default function DoctorsPage() {
   return (
     <ProtectedRoute>
       <div className="container py-5">
-        <h1 className="mb-4">Find a Doctor</h1>
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <h1>Find a Doctor</h1>
+          <button
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                localStorage.removeItem("isAuthenticated")
+                localStorage.removeItem("userEmail")
+                window.location.href = "/"
+              }
+            }}
+            className="btn btn-outline-danger"
+          >
+            Logout
+          </button>
+        </div>
 
         {/* Search and Filter Section */}
         <div className="card mb-4 border-0 shadow-sm">

@@ -82,9 +82,23 @@ export default function AppointmentsPage() {
       <div className="container py-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h1>My Appointments</h1>
-          <Link href="/appointments/book" className="btn btn-primary">
-            Book New Appointment
-          </Link>
+          <div className="d-flex gap-2">
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  localStorage.removeItem("isAuthenticated")
+                  localStorage.removeItem("userEmail")
+                  window.location.href = "/"
+                }
+              }}
+              className="btn btn-outline-danger"
+            >
+              Logout
+            </button>
+            <Link href="/appointments/book" className="btn btn-primary">
+              Book New Appointment
+            </Link>
+          </div>
         </div>
 
         {/* Filter Tabs */}

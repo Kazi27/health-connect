@@ -8,10 +8,10 @@ export default function Home() {
       <section className="row py-5 align-items-center">
         <div className="col-md-6">
           <h1 className="display-4 fw-bold text-primary">HealthConnect</h1>
-          <p className="lead">Connecting patients with healthcare professionals for better care.</p>
-          <p className="mb-4">
-            Schedule appointments, view doctor profiles, and manage your healthcare journey all in one place.
+          <p className="lead">
+            Health Connect is most focused in helping you organize and observe your health in the most efficient way
           </p>
+          <p className="mb-4">A Place where Care meets Clarity...</p>
           <div className="d-flex gap-3">
             <Link href="/signup" className="btn btn-primary btn-lg">
               Get Started
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <div className="position-relative hero-image-container">
             <Image
-              src="/images/heros.png"
+              src="/images/hero.png"
               alt="Healthcare professionals"
               width={600}
               height={400}

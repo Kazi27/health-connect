@@ -120,22 +120,25 @@ export default function AppointmentsPage() {
         {/* Filter Tabs */}
         <div className="mb-4">
           <ul className="nav nav-pills">
-            <li className="nav-item">
-              <button className={`nav-link ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>
+            <li className="nav-item me-2">
+              <button
+                className={`nav-link ${filter === "all" ? "active bg-primary text-white" : ""}`}
+                onClick={() => setFilter("all")}
+              >
                 All
               </button>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-2">
               <button
-                className={`nav-link ${filter === "upcoming" ? "active" : ""}`}
+                className={`nav-link ${filter === "upcoming" ? "active bg-primary text-white" : ""}`}
                 onClick={() => setFilter("upcoming")}
               >
                 Upcoming
               </button>
             </li>
-            <li className="nav-item">
+            <li className="nav-item me-2">
               <button
-                className={`nav-link ${filter === "completed" ? "active" : ""}`}
+                className={`nav-link ${filter === "completed" ? "active bg-primary text-white" : ""}`}
                 onClick={() => setFilter("completed")}
               >
                 Completed
@@ -143,7 +146,7 @@ export default function AppointmentsPage() {
             </li>
             <li className="nav-item">
               <button
-                className={`nav-link ${filter === "cancelled" ? "active" : ""}`}
+                className={`nav-link ${filter === "cancelled" ? "active bg-primary text-white" : ""}`}
                 onClick={() => setFilter("cancelled")}
               >
                 Cancelled

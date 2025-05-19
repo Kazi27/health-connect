@@ -1,11 +1,13 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { login, isAuthenticated } from "@/lib/auth"
 
 export default function Login() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -17,6 +19,13 @@ export default function Login() {
     password: "",
     general: "",
   })
+
+  // Check if user is already logged in
+  useEffect(() => {
+    if (isAuthenticated()) {
+      router.push("/doctors")
+    }
+  }, [router])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target
@@ -58,18 +67,17 @@ export default function Login() {
     e.preventDefault()
 
     if (validateForm()) {
-      // Here we would normally authenticate with the backend
-      console.log("Login attempt:", formData)
+      // Try to log in with the provided credentials
+      const success = login(formData.email, formData.password)
 
-      // For demo purposes, let's simulate a successful login
-      // In a real app, you would verify credentials with your backend
-      if (formData.email === "demo@example.com" && formData.password === "password") {
-        // Redirect to dashboard
-        window.location.href = "/dashboard"
+      if (success) {
+        // Redirect to doctors page on successful login
+        router.push("/doctors")
       } else {
+        // Show error message for invalid credentials
         setErrors((prev) => ({
           ...prev,
-          general: "Invalid email or password",
+          general: "Invalid email or password. Please use the email & password you set when signing up",
         }))
       }
     }
@@ -155,6 +163,13 @@ export default function Login() {
                   Sign Up
                 </Link>
               </p>
+
+              {/* Demo credentials hint */}
+              {/* <div className="mt-4 p-3 bg-light rounded">
+                <p className="mb-1 fw-bold">Demo Credentials:</p>
+                <p className="mb-1 small">Email: Adeedat.official@gmail.com</p>
+                <p className="mb-0 small">Password: Dee6462772</p>
+              </div> */}
             </div>
           </div>
         </div>

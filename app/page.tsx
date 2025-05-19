@@ -21,14 +21,19 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="col-md-6">
-          <Image
-            src="/images/hero.png"
-            alt="Healthcare professionals"
-            width={9000}
-            height={400}
-            className="img-fluid rounded shadow"
-          />
+        <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="position-relative hero-image-container">
+            <Image
+              src="/images/hero.png"
+              alt="Healthcare professionals"
+              width={600}
+              height={400}
+              className="img-fluid rounded shadow hero-image"
+              priority
+            />
+            <div className="hero-overlay"></div>
+            <div className="hero-glow"></div>
+          </div>
         </div>
       </section>
 

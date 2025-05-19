@@ -59,18 +59,36 @@ export default function DoctorsPage() {
       <div className="container py-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h1>Find a Doctor</h1>
-          <button
-            onClick={() => {
-              if (typeof window !== "undefined") {
-                localStorage.removeItem("isAuthenticated")
-                localStorage.removeItem("userEmail")
-                window.location.href = "/"
-              }
-            }}
-            className="btn btn-outline-danger"
-          >
-            Logout
-          </button>
+          <div className="d-flex gap-2">
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  localStorage.removeItem("isAuthenticated")
+                  localStorage.removeItem("userEmail")
+                  window.location.href = "/"
+                }
+              }}
+              className="btn btn-outline-danger"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+
+        {/* Navigation Tabs */}
+        <div className="mb-4">
+          <ul className="nav nav-tabs">
+            <li className="nav-item">
+              <Link href="/doctors" className="nav-link active">
+                Doctors
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/appointments" className="nav-link">
+                My Appointments
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Search and Filter Section */}

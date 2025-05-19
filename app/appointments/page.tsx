@@ -101,9 +101,25 @@ export default function AppointmentsPage() {
           </div>
         </div>
 
-        {/* Filter Tabs */}
+        {/* Navigation Tabs */}
         <div className="mb-4">
           <ul className="nav nav-tabs">
+            <li className="nav-item">
+              <Link href="/doctors" className="nav-link">
+                Doctors
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/appointments" className="nav-link active">
+                My Appointments
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="mb-4">
+          <ul className="nav nav-pills">
             <li className="nav-item">
               <button className={`nav-link ${filter === "all" ? "active" : ""}`} onClick={() => setFilter("all")}>
                 All
